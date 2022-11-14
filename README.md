@@ -14,6 +14,7 @@
 git_hub_repo='' # exemple https://github.com/hypersign-protocol/hid-node.git
 pero=$(echo $git_hub_repo | sed "s/^.*\///" | sed 's/.git//')
 version='' # exemple v1.0.3
+Name_config_file='' # exemple .hid-node
 Name_service="" # exemple hypersingd
 rpc=$(sed -n "91 s/^.*://p" ~/$Name_config_file/config/config.toml | sed -n 's/"$//p')
 
