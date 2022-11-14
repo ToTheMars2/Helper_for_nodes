@@ -23,7 +23,7 @@ rpc=$(sed -n "91 s/^.*://p" ~/$Name_config_file/config/config.toml | sed -n 's/"
 service $Name_service stop
 cd ~/$pero && git pull || git clone $git_hub_repo && cd ~/$pero
 git checkout $vers
-make build
+make install
 service $Name_service start
 curl -s localhost:$rpc/consensus_state | jq '.result.round_state.height_vote_set[0].prevotes_bit_array'
 
