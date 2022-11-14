@@ -14,6 +14,7 @@ pero=$(echo $git_hub_repo | sed "s/^.*\///" | sed 's/.git//')
 version='' # exemple v1.0.3
 Name_config_file='' # exemple .hid-node
 Name_service="" # exemple hypersingd
+rpc=$(sed -n "91 s/^.*://p" ~/$Name_config_file/config/config.toml | sed -n 's/"$//p')
 
 ```
 ```
@@ -22,6 +23,8 @@ cd ~/$pero && git pull || git clone $git_hub_repo && cd ~/$pero
 git checkout $vers
 make build
 service $Name_service start
+curl -s localhost:$rpc/consensus_state | jq '.result.round_state.height_vote_set[0].prevotes_bit_array'
+
 ```
 
 
