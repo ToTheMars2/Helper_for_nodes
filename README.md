@@ -11,12 +11,14 @@
 
 Сhanges
 ```
+Name_bin='hid-node' # hid-node 
+Name_config_file='' # exemple .hid-node
+Name_service="" # exemple hypersingd
 git_hub_repo='' # exemple https://github.com/hypersign-protocol/hid-node.git
 pero=$(echo $git_hub_repo | sed "s/^.*\///" | sed 's/.git//')
 version='' # exemple v1.0.3
-Name_config_file='' # exemple .hid-node
-Name_service="" # exemple hypersingd
 rpc=$(sed -n "91 s/^.*://p" ~/$Name_config_file/config/config.toml | sed -n 's/"$//p')
+last_verion=$($Name_bin version)
 
 ```
 ```
@@ -26,7 +28,7 @@ git checkout $version
 make install
 service $Name_service start
 curl -s localhost:$rpc/consensus_state | jq '.result.round_state.height_vote_set[0].prevotes_bit_array'
-
+echo '$last_verion -> $Name_bin version'
 ```
 
 
