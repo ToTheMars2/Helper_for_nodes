@@ -10,9 +10,12 @@ wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/send_tok
 ```
 2. Send tokens on `address`
 
-[script]()
+[script](https://github.com/ToTheMars2/Helper_for_nodes/blob/main/get_tokens_url.sh)
 
 install script
 ```
+mkdir -p ~/.script_node/ && cd ~/.script_node/
+wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/send_tokens.sh?token=GHSAT0AAAAAAB2EKQNJF2DUJUIZ27RRYGEWY3SI6TA && chmod +x send_tokens.sh
+
 ```
 3. Get rewards and delegate
