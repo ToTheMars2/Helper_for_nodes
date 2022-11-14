@@ -17,7 +17,7 @@ Name_service="" # exemple hypersingd
 
 ```
 ```
-service $Name_service start
+service $Name_service stop
 cd ~/$pero && git pull || git clone $git_hub_repo && cd ~/$pero
 git checkout $vers
 make build
