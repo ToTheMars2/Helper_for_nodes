@@ -1,5 +1,6 @@
 1. Get tokens from `url`
-[script]()
+2. 
+[script](https://github.com/ToTheMars2/Helper_for_nodes/blob/main/send_tokens.sh)
 
 install script
 ```
@@ -8,6 +9,7 @@ wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/send_tok
 
 ```
 2. Send tokens on `address`
+
 [script]()
 
 install script
