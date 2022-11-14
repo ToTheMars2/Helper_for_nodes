@@ -1,5 +1,4 @@
 1. Get tokens from `url`
-2. 
 [script](https://github.com/ToTheMars2/Helper_for_nodes/blob/main/send_tokens.sh)
 
 install script
