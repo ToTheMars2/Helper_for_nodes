@@ -5,7 +5,9 @@
 
 
 
-## Update cosmos blokchain through Github
+## Update cosmos blokchain
+
+<b>through Github</b>
 
 Сhanges
 ```
