@@ -11,7 +11,7 @@
 
 Сhanges
 ```
-Name_bin='hid-node' # hid-node 
+Name_bin='' # hid-node 
 Name_config_file='' # exemple .hid-node
 Name_service="" # exemple hypersingd
 git_hub_repo='' # exemple https://github.com/hypersign-protocol/hid-node.git
