@@ -4,17 +4,26 @@ bin=$1
 name_wallet=$2
 to_val_address=$3
 file=$4
-pass=$5
+chain=$5
+node=$6
+pass=$7
 
 #count=0
 #while true;
 #  do
 #    (( from_count++ ))
-  <binary> keys show <keyname> --bech val
-  ADDR=$(echo $pass | $bin keys show $name_wallet --bech val --keyring-backend $file | grep address| sed "s/- address: //")
-  echo "Val Address $ADDR"
-  echo "Get comissi"
   
-  echo $pass | $bin tx bank send $ADDR $to_address 10000000utlore --from $from_count -y
+ADDR=$(echo $pass | $bin keys show $name_wallet --bech val --keyring-backend $file | grep address| sed "s/  address: //")
+
+echo "Val Address $ADDR"
+echo "Get comissi"
+
+echo $pass | $bin tx distribution withdraw-rewards $ADDR --from $name_wallet --commission --chain-id $chain --node $node -y
+ADDR=$(echo $pass | $bin keys show $name_wallet --keyring-backend $file | grep address| sed "s/- address: //")
+
+echo "Show balances"
+$bin q bank balances $ADDR
+
+
   
-  done
+done
