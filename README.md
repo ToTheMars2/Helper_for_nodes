@@ -1,3 +1,6 @@
+*[scripts]()
+
+
 # Helper_for_nodes
 
 *Update cosmos blokchain
@@ -10,4 +13,5 @@
 
 
 ## Update cosmos blokchain
+
 
