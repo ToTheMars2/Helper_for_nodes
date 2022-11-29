@@ -4,7 +4,7 @@ chain_id=${2:-'gitopia-janus-testnet-2'}
 node=${3:-'http://localhost:26657'}
 wallet_name=${2:-'tothemars'}
 denom=${3:-'utlore'}
-password=${4:-'Papsan123'}
+password=${4:-'*****'}
 #m - minuts; h - hour;  
 ttime=${5:-'1h'}
 keyring_backend=${7:-'os'}
