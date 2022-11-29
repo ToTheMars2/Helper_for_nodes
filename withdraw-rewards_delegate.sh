@@ -18,7 +18,7 @@ do
   ADDR=$( echo -e $password'\ny' | $bin keys show $wallet_name --keyring-backend $keyring_backend | grep address | sed  's/- address: //')
   echo $password | $bin tx distribution withdraw-rewards $ADDR_VAL --keyring-backend $keyring_backend --chain-id $chain_id --node $node --commission --from $wallet_name -y
   sleep 30
-  amount=$($bin q bank balances $ADDR  --denom $denom | grep amount | sed  's/amount: "//'| sed  's/"$//')
+  amount=$($bin q bank balances $ADDR --denom $denom --node $node | grep amount | sed  's/amount: "//'| sed  's/"$//')
   echo $password | $bin tx staking delegate $ADDR_VAL $amount$denom --keyring-backend $keyring_backend --chain-id $chain_id --node $node --from $wallet_name -y
   sleep $ttime
 done
