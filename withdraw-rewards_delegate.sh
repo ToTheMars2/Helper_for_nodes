@@ -2,12 +2,12 @@
 bin=${1:-'gitopiad'}
 chain_id=${2:-'gitopia-janus-testnet-2'}
 node=${3:-'http://localhost:26657'}
-wallet_name=${2:-'tothemars'}
-denom=${3:-'utlore'}
-password=${4:-'*****'}
+wallet_name=${4:-'tothemars'}
+denom=${5:-'utlore'}
+password=${6:-'*****'}
 #m - minuts; h - hour;  
-ttime=${5:-'1h'}
-keyring_backend=${7:-'os'}
+ttime=${7:-'1h'}
+keyring_backend=${8:-'os'}
 
 while :
 do
