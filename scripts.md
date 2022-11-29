@@ -5,7 +5,7 @@
 install script
 ```
 mkdir -p ~/.script_node/strout/ && cd ~/.script_node/
-wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/get_tokens_url.sh?token=GHSAT0AAAAAAB2EKQNJKJZJR2XX4TQ7KCX2Y3SJHTA && chmod +x send_tokens.sh
+wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/get_tokens_url.sh && chmod +x get_tokens_url.sh
 
 ```
 ## Send tokens on `address`
@@ -15,7 +15,7 @@ wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/get_toke
 install script
 ```
 mkdir -p ~/.script_node/strout/ && cd ~/.script_node/
-wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/send_tokens.sh?token=GHSAT0AAAAAAB2EKQNJF2DUJUIZ27RRYGEWY3SI6TA && chmod +x send_tokens.sh
+wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/send_tokens.sh && chmod +x send_tokens.sh
 
 ```
 ## Get rewards and delegate
@@ -25,7 +25,7 @@ wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/send_tok
 install script
 ```
 mkdir -p ~/.script_node/strout/ && cd ~/.script_node/
-wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/withdraw-rewards_delegate.sh && chmod +x send_tokens.sh
+wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/withdraw-rewards_delegate.sh && chmod +x withdraw-rewards_delegate.sh
 
 ```
 
