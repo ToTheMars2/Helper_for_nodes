@@ -21,7 +21,7 @@ do
   echo $password | $bin tx distribution withdraw-rewards $ADDR_VAL --keyring-backend $keyring_backend --chain-id $chain_id --node $node $fees>
   sleep 30
   amount=$($bin q bank balances $ADDR --denom $denom --node $node | grep amount | sed  's/amount: "//'| sed  's/"$//')
-  let rizn=$amount-$tokens_that_left
+  rizn=`echo "$amount - $tokens_that_left" | bc`
   echo $password | $bin tx staking delegate $ADDR_VAL $rizn$denom --keyring-backend $keyring_backend --chain-id $chain_id --node $node $fees >
   sleep $ttime
 done
