@@ -16,8 +16,8 @@ do
   echo ""
   date
   echo ""
-  ADDR_VAL=$( echo -e $password'\ny' | $bin keys show $wallet_name --keyring-backend $keyring_backend --bech val | grep address | sed  's/- address: //')
-  ADDR=$( echo -e $password'\ny' | $bin keys show $wallet_name --keyring-backend $keyring_backend | grep address | sed  's/- address: //')
+  ADDR_VAL=$( echo -e $password'\ny' | $bin keys show $wallet_name --keyring-backend $keyring_backend --bech val | grep address | sed  's/^.*: //')
+  ADDR=$( echo -e $password'\ny' | $bin keys show $wallet_name --keyring-backend $keyring_backend | grep address | sed  's/^.*: //')
   echo $password | $bin tx distribution withdraw-rewards $ADDR_VAL --keyring-backend $keyring_backend --chain-id $chain_id --node $node $fees --from $wallet_name -y  --commission
   sleep 30
   amount=$($bin q bank balances $ADDR --denom $denom --node $node | grep amount | sed  's/amount: "//'| sed  's/"$//')
