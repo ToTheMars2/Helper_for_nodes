@@ -11,4 +11,8 @@ while [ $count -lt 15 ]
   echo -e "wallet $count\n"
   ADDR=$(echo -e "$pass\ny"| $bin keys add $count | grep address | sed  's/^.*: //')
   echo "$save" | jq ".$count = $ADDR"
-  done
+done
+for i in $(echo "$save" | jq '. | keys | .[] | sed 's/\"//; s/\"$//' ' )
+do 
+
+done
