@@ -1,3 +1,14 @@
+## Create wallets
+[script](https://github.com/ToTheMars2/Helper_for_nodes/blob/main/create_wallet.sh)
+
+
+install script
+```
+mkdir -p ~/.script_node/strout/ && cd ~/.script_node/
+wget  && chmod +x get_tokens_url.sh
+
+```
+
 ## Get tokens from `url`
 
 [script](https://github.com/ToTheMars2/Helper_for_nodes/blob/main/get_tokens_url.sh)
