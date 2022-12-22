@@ -1,5 +1,5 @@
 * [scripts](https://github.com/ToTheMars2/Helper_for_nodes/blob/main/scripts.md)
-*
+* [Install Rust](https://www.rust-lang.org/tools/install)
 
 # Helper_for_nodes
 
