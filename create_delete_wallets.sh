@@ -4,7 +4,7 @@ count=$start
 bin=$1
 create_or_delete=${2:-"true"}
 nomber=${3:-"10"}
-pass="aaaa0005"
+pass="****"
 
 save="{}"
 if $create_or_delete
