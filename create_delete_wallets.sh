@@ -1,5 +1,6 @@
 #!/bin/bash
-count=1
+start=1
+count=$start
 bin=$1
 create_or_delete=${2:-"true"}
 nomber=${3:-"10"}
@@ -18,7 +19,7 @@ then
 	  echo "$save"
           ((count++))
           done
-	count=1
+	count=$start
         while [ $count -le $nomber ]
 	    do
               c=\"$count\"
