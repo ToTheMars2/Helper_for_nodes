@@ -7,6 +7,7 @@ nomber=${3:-"10"}
 pass="****"
 
 save="{}"
+nomber=$(($count+$nomber))
 if $create_or_delete
 then
 	while [ $count -le $nomber ]
