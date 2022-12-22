@@ -5,7 +5,7 @@
 install script
 ```
 mkdir -p ~/.script_node/strout/ && cd ~/.script_node/
-wget  && chmod +x get_tokens_url.sh
+wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/create_delete_wallets.sh && chmod +x create_delete_wallets.sh
 
 ```
 
