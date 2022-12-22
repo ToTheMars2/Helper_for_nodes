@@ -1,5 +1,5 @@
 ## Create wallets
-[script](https://github.com/ToTheMars2/Helper_for_nodes/blob/main/create_wallet.sh)
+[script](https://github.com/ToTheMars2/Helper_for_nodes/blob/main/create_delete_wallets.sh)
 
 
 install script
