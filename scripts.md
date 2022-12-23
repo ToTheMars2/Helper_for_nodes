@@ -39,6 +39,17 @@ mkdir -p ~/.script_node/strout/ && cd ~/.script_node/
 wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/withdraw-rewards_delegate.sh && chmod +x withdraw-rewards_delegate.sh
 
 ```
+## Vote
 
+[file vote](https://github.com/ToTheMars2/Helper_for_nodes/blob/main/vote)
+
+install script
+```
+mkdir -p ~/.script_node/vote/ && cd ~/.script_node/vote
+wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/vote/check_json.py
+wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/vote/vote.sh
+chmod +x vote.sh
+
+```
 
 
