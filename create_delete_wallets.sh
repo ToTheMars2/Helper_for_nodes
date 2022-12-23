@@ -2,8 +2,8 @@
 start=1
 count=$start
 bin=$1
-create_or_delete=${2:-"true"}
-nomber=${3:-"10"}
+nomber=${2:-"10"}
+create_or_delete=${3:-"true"}
 pass="****"
 
 save="{}"
