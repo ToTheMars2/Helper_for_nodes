@@ -1,14 +1,5 @@
 #!/bin/bash
-bin=${1:-"starsd"}
-count=0
-
-list_gov_network='{"stargaze":{"bin":"starsd" , "fees":"", "node":"", "chain_id":"", "from":"--from papsan", "pass":"12345678"},
-"gravity":{"bin": "gravity", "fees": "", "node": "", "chain_id": "--chain-id gravity-bridge-3", "from": "--from web34ever", "pass": "12345678"} }'
-
-#a='{"stargaze": [101]}'
-
-#a='/root/.script_node/out'
-
+list_gov_network='{"stargaze":{"bin":"starsd" , "fees":"", "node":"", "chain_id":"", "from":"--from papsan", "pass":"******"} }'
 
 for platforms in $(echo $list_gov_network | jq '. | keys | .[]')
 do
