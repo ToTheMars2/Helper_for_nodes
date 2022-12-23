@@ -1,4 +1,4 @@
-## Create wallets
+## Create Delete wallets
 [script](https://github.com/ToTheMars2/Helper_for_nodes/blob/main/create_delete_wallets.sh)
 
 
