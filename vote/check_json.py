@@ -18,7 +18,7 @@ if exists(path_file_out):
 
     else:
         answer = 'false' if check_id in data[platform] else 'true'
-        if answer == False:
+        if answer == 'true':
             data[platform].append(check_id)
         data[platform].sort(reverse=True)
 
