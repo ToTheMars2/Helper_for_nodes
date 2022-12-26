@@ -51,5 +51,9 @@ wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/vote/vot
 chmod +x vote.sh
 
 ```
+```
+PATH=/bin:/usr/bin:/root/go/bin:/usr/local/lib/python3.8
+0 12 * * * bash -c "cd ~/.script_node/vote/ && ./vote.sh >> answer 2>&1"
 
+```
 
