@@ -17,7 +17,6 @@ then
 	  c=\"$count\"
           a=\"$ADDR\"
           save=$(echo "$save" | jq ".$c = $a")
-	  echo "$save"
           ((count++))
           done
 	count=$start
