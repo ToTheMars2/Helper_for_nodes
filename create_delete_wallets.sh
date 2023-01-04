@@ -4,6 +4,7 @@ count=$start
 bin=$1
 nomber=${2:-""}
 create_or_delete=${3:-"3"}
+keyring="os"
 pass="aaaa0005"
 
 save="{}"
@@ -13,7 +14,7 @@ then
         while [ $count -le $nomber ]
           do
           echo -e "create wallet $count\n"
-          ADDR=$(echo -e "$pass\ny"| $bin keys add $count | grep address | sed  's/^.*: //')
+          ADDR=$(echo -e "$pass\ny"| $bin keys add $count --keyring-backend $keyring | grep address | sed  's/^.*: //')
           c=\"$count\"
           a=\"$ADDR\"
           save=$(echo "$save" | jq ".$c = $a")
@@ -33,7 +34,7 @@ then
         while [ $count -le $nomber ]
           do
           echo -e "delete wallet $count\n"
-          ADDR=$(echo -e "$pass"| $bin keys delete $count -y)
+          ADDR=$(echo -e "$pass"| $bin keys delete $count -y --keyring-backend $keyring)
         ((count++))
         done
 elif [ $create_or_delete == "3" ]
@@ -41,7 +42,7 @@ then
         while [ $count -le $nomber ]
           do
           echo -e "balance wallet $count\n"
-          ADDR=$(echo -e "$pass"| $bin keys show $count -a)
+          ADDR=$(echo -e "$pass"| $bin keys show $count -a --keyring-backend $keyring)
           $bin q bank balances $ADDR
           ((count++))
           done
