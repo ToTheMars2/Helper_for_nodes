@@ -2,37 +2,49 @@
 start=1
 count=$start
 bin=$1
-nomber=${2:-"10"}
-create_or_delete=${3:-"true"}
-pass="****"
+nomber=${2:-""}
+create_or_delete=${3:-"3"}
+pass="aaaa0005"
 
 save="{}"
 nomber=$(($count+$nomber))
-if $create_or_delete
+if [ $create_or_delete == "1" ]
 then
-	while [ $count -le $nomber ]
-	  do
-	  echo -e "create wallet $count\n"
-	  ADDR=$(echo -e "$pass\ny"| $bin keys add $count | grep address | sed  's/^.*: //')
-	  c=\"$count\"
+        while [ $count -le $nomber ]
+          do
+          echo -e "create wallet $count\n"
+          ADDR=$(echo -e "$pass\ny"| $bin keys add $count | grep address | sed  's/^.*: //')
+          c=\"$count\"
           a=\"$ADDR\"
           save=$(echo "$save" | jq ".$c = $a")
+          echo "$save"
           ((count++))
           done
-	count=$start
+        count=$start
         while [ $count -le $nomber ]
-	    do
+            do
               c=\"$count\"
-	      value=$(echo "$save" | jq ".$c" | sed 's/\"//; s/\"$//' )
-	      echo "$count. $value"
-	      ((count++))
+              value=$(echo "$save" | jq ".$c" | sed 's/\"//; s/\"$//' )
+              echo "$count. $value"
+              ((count++))
              done
-else
-	while [ $count -le $nomber ]
+elif [ $create_or_delete == "2" ]
+then
+        while [ $count -le $nomber ]
           do
           echo -e "delete wallet $count\n"
           ADDR=$(echo -e "$pass"| $bin keys delete $count -y)
         ((count++))
         done
+elif [ $create_or_delete == "3" ]
+then
+        while [ $count -le $nomber ]
+          do
+          echo -e "balance wallet $count\n"
+          ADDR=$(echo -e "$pass"| $bin keys show $count -a)
+          $bin q bank balances $ADDR
+          ((count++))
+          done
+else
+  echo 'This option is incorrect'
 fi
-
