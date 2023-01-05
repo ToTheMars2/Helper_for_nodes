@@ -2,7 +2,7 @@
 start=1
 count=$start
 bin=$1
-nomber=${2:-""}
+nomber=${2:-"10"}
 create_or_delete=${3:-"3"}
 keyring="os"
 pass="****"
