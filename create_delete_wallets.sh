@@ -5,7 +5,7 @@ bin=$1
 nomber=${2:-""}
 create_or_delete=${3:-"3"}
 keyring="os"
-pass="aaaa0005"
+pass="****"
 
 save="{}"
 nomber=$(($count+$nomber))
