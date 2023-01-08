@@ -10,7 +10,7 @@ ttime='1h' # 1 - seconds; 1m - minuts; 1h - hour;
 keyring_backend='os'
 password='*****'
 
-
+# for run screen
 while :
 do
   echo ""
@@ -25,3 +25,17 @@ do
   echo $password | $bin tx staking delegate $ADDR_VAL $rizn$denom --keyring-backend $keyring_backend --chain-id $chain_id --node $node $fees --from $wallet_name -y
   sleep $ttime
 done
+
+#for run crontab
+
+# echo ""
+# date
+# echo ""
+# ADDR_VAL=$( echo -e $password'\ny' | $bin keys show $wallet_name --keyring-backend $keyring_backend --bech val | grep address | sed  's/^.*: >
+# ADDR=$( echo -e $password'\ny' | $bin keys show $wallet_name --keyring-backend $keyring_backend | grep address | sed  's/^.*: //')
+# echo $password | $bin tx distribution withdraw-rewards $ADDR_VAL --keyring-backend $keyring_backend --chain-id $chain_id --node $node $fees ->
+# sleep 1m
+# amount=$($bin q bank balances $ADDR --denom $denom --node $node | grep amount | sed  's/^.*: "//'| sed  's/"$//')
+# rizn=`echo "$amount - $tokens_that_left" | bc`
+# echo $password | $bin tx staking delegate $ADDR_VAL $rizn$denom --keyring-backend $keyring_backend --chain-id $chain_id --node $node $fees -->
+
