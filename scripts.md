@@ -39,6 +39,16 @@ mkdir -p ~/.script_node/strout/ && cd ~/.script_node/
 wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/withdraw-rewards_delegate.sh && chmod +x withdraw-rewards_delegate.sh
 
 ```
+Screen
+```
+#Examle
+screen -S gitopia-rew_delegate
+```
+Crontab
+```
+crontab -e
+0 * * * * bash -c "cd ~/.script_node && ./gitopia-rewards_delegate.sh >> /root/.script_node/strout/gitopia 2>&1"
+```
 ## Vote
 
 [file vote](https://github.com/ToTheMars2/Helper_for_nodes/blob/main/vote)
