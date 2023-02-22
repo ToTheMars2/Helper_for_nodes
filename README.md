@@ -29,7 +29,7 @@ $Name_bin version
 make install
 $Name_bin version
 service $Name_service start
-sleep 3
+sleep 10
 curl -s localhost:$rpc/consensus_state | jq '.result.round_state.height_vote_set[0].prevotes_bit_array'
 
 ```
