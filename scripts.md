@@ -67,3 +67,17 @@ PATH=/bin:/usr/bin:/root/go/bin:/usr/local/lib/python3.8
 
 ```
 
+## Snapshot
+
+```
+install script
+```
+mkdir -p ~/.script_node/snapshot/ && cd ~/.script_node/snapshot
+
+chmod +x snapshot.sh
+```
+```
+PATH=/bin:/usr/bin:/root/go/bin:/usr/local/lib/python3.8
+0 14,2 * * * bash -c "cd ~/.script_node/snapshot/ && ./snapshot.sh >> answer 2>&1"
+
+```
