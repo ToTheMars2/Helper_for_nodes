@@ -73,7 +73,7 @@ PATH=/bin:/usr/bin:/root/go/bin:/usr/local/lib/python3.8
 install script
 ```
 mkdir -p ~/.script_node/snapshot/ && cd ~/.script_node/snapshot
-
+wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/snapshot.sh
 chmod +x snapshot.sh
 ```
 ```
