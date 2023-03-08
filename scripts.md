@@ -78,7 +78,7 @@ wget https://raw.githubusercontent.com/ToTheMars2/Helper_for_nodes/main/snapshot
 chmod +x snapshot.sh
 ```
 ```
-PATH=/bin:/usr/bin:/root/go/bin:/usr/local/lib/python3.8
+PATH=/bin:/usr/bin:/root/go/bin
 0 14,2 * * * bash -c "cd ~/.script_node/snapshot/ && ./snapshot.sh >> answer 2>&1"
 
 ```
