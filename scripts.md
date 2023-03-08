@@ -69,7 +69,7 @@ PATH=/bin:/usr/bin:/root/go/bin:/usr/local/lib/python3.8
 
 ## Snapshot
 
-```
+
 install script
 ```
 mkdir -p ~/.script_node/snapshot/ && cd ~/.script_node/snapshot
