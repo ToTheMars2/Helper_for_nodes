@@ -69,6 +69,7 @@ PATH=/bin:/usr/bin:/root/go/bin:/usr/local/lib/python3.8
 
 ## Snapshot
 
+[file](https://github.com/ToTheMars2/Helper_for_nodes/blob/main/snapshot.sh)
 
 install script
 ```
