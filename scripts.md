@@ -47,7 +47,8 @@ screen -S gitopia-rew_delegate
 Crontab
 ```
 crontab -e
-0 * * * * bash -c "cd ~/.script_node && ./gitopia-rewards_delegate.sh >> /root/.script_node/strout/gitopia 2>&1"
+#Gitopia restaking ubuntu
+31 12 * * * $HOME/.script_node/gitopia-rewards_delegate.sh >> $HOME/.script_node/strout/gitopia 2>&1
 ```
 ## Vote
 
